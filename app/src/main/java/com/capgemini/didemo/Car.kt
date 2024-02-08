@@ -14,9 +14,10 @@ class Car @Inject constructor( val engine: Engine) {
     }
 }
 
-class Engine (val type: String){
+class Engine @Inject constructor (@Named("ElecEngine") val type: String){
 
     fun start(){
 
     }
 }
+

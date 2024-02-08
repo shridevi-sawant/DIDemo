@@ -14,10 +14,16 @@ import javax.inject.Qualifier
 object EngineModule {
 
 
+//    @Provides
+//    fun getAutoEngine(): Engine{
+//        return Engine("Auto")
+//    }
     @Provides
-    fun getAutoEngine(): Engine{
-        return Engine("Auto")
-    }
+    @Named("AutoEngine")
+    fun providesAutoEngine() = "Automatic"
 
+    @Provides
+    @Named("ElecEngine")
+    fun providesElectricEngine() = "Electric"
 
 }
